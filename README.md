@@ -1,5 +1,7 @@
 # Esri Leaflet Clustered Feature Layer
 
+[![Build Status](https://travis-ci.org/Esri/esri-leaflet-clustered-feature-layer.svg)](https://travis-ci.org/Esri/esri-leaflet-clustered-feature-layer)
+
 A plugin for Esri Leaflet that enables visualization of Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
 ### Demos
