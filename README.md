@@ -30,7 +30,7 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/leaflet.markercluster.js"></script>
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.6/esri-leaflet-clustered-feature-layer.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-clustered-feature-layer/0.0.1-beta.1/esri-leaflet-clustered-feature-layer.js"></script>
 
   <style>
     body {margin:0;padding:0;}
