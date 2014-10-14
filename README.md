@@ -3,12 +3,12 @@
 A plugin for Esri Leaflet that enables visualization of Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
 ### Demos
-A live demo is available on the [Esri Leaflet website](http://esri.github.io/esri-leaflet/examples/visualize-points-as-a-heatmap.html).
+A live demo is available on the [Esri Leaflet website](http://esri.github.io/esri-leaflet/examples/custering-feature-layers.html).
 
 ### Example
 Here is a quick example to get you started. Just change the paths to point to the proper libraries and go.
 
-<a href="http://esri.github.io/esri-leaflet/examples/visualize-points-as-a-heatmap.html">
+<a href="http://esri.github.io/esri-leaflet/examples/custering-feature-layers.html">
   <img src="https://github.com/Esri/esri-leaflet-clustered-feature-layer/raw/master/esri-leaflet-clustered-feature-layer.jpg" alt="Demo">
 </a>
 
