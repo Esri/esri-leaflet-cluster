@@ -1,12 +1,6 @@
-# Esri Leaflet
+# Esri Leaflet Clustered Feature Layer
 
-[![Build Status](https://travis-ci.org/Esri/esri-leaflet.svg)](https://travis-ci.org/Esri/esri-leaflet)
-
-Leaflet plugins wfor [ArcGIS Services](http://developers.arcgis.com). Currently Esri Leaflet supports loading Esri [basemaps](http://esri.github.io/esri-leaflet/examples/switching-basemaps.html) and [feature services](http://esri.github.io/esri-leaflet/examples/simple-feature-layer.html), as well as [tiled](http://esri.github.io/esri-leaflet/examples/tile-layer-2.html), [dynamic](http://esri.github.io/esri-leaflet/examples/simple-dynamic-map-layer.html) and [image](http://esri.github.io/esri-leaflet/examples/simple-image-map-layer.html)  map services.
-
-The goal of Esri Leaflet is **not** to replace the [ArcGIS API for JavaScript](https://developers.arcgis.com/en/javascript/), but rather to provide small components to allow developers to build mapping applications with Leaflet.
-
-**Currently Esri Leaflet is in development and should be thought of as a beta or preview.**
+A plugin for Esri Leaflet that enables visualization of Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
 ### Demos
 There are [loads of demos](http://patrickarlt.github.io/esri-leaflet/examples/) showing the features of Esri Leaflet that will help you get started.
@@ -28,7 +22,7 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
   <!-- Load Esri Leaflet from CDN -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.6/esri-leaflet.js"></script>
 
   <!-- Include Leaflet.markercluster via rawgit.com, do not use in production -->
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/MarkerCluster.Default.css">
@@ -36,7 +30,7 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/leaflet.markercluster.js"></script>
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-clustered-feature-layer.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.6/esri-leaflet-clustered-feature-layer.js"></script>
 
   <style>
     body {margin:0;padding:0;}
@@ -72,15 +66,16 @@ Make Sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed
 
 1. [Fork and clone this repo](https://help.github.com/articles/fork-a-repo)
 2. `cd` into the `esri-leaflet` folder
-5. Install the dependencies with `npm install`
-5. run `grunt` from the command line. This will start watching the source files and running linting and testing commands.
+3. Install the dependencies with `npm install`
+4. run `grunt` from the command line. This will start watching the source files and running linting and testing commands.
+5. Open `debug/sample.html` which will load up a development environment.
 6. Make your changes and create a [pull request](https://help.github.com/articles/creating-a-pull-request)
 
 ### Dependencies
 
 * [Leaflet](http://leaflet.com) version 0.7 or higher is required and the latest version is recommended.
 * [Esri Leaflet](http://esri.github.io/esri-leaflet/) beta 5 or or higher is required but the latest version is recommended.
-* [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version 0.4
+* [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version 0.4 is required.
 
 ### Resources
 

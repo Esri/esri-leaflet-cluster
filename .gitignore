@@ -23,7 +23,8 @@ coverage
 .grunt/
 
 # Debugging Files
-working
+debug/*.html
+!debug/sample.html
 
 # Docs Build
 site/build
@@ -31,3 +32,4 @@ site/build
 # Built Files
 dist/**/*.js
 dist/**/*.map
+
