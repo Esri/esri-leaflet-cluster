@@ -4,7 +4,9 @@
     define(['leaflet', 'esri-leaflet'], function (L, Esri) {
       return factory(L, Esri);
     });
+
   // define a common js module that relies on 'leaflet'
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = factory(require('leaflet'), require('esri-leaflet'));
   }
 

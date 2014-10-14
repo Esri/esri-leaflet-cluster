@@ -1,4 +1,4 @@
-describe('L.esri.Layers.ClusteredFeatureLayer', function () {
+describe('ClusteredFeatureLayer', function () {
   function createMap(){
     // create container
     var container = document.createElement('div');
