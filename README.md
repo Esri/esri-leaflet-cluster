@@ -3,12 +3,14 @@
 A plugin for Esri Leaflet that enables visualization of Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
 ### Demos
-There are [loads of demos](http://patrickarlt.github.io/esri-leaflet/examples/) showing the features of Esri Leaflet that will help you get started.
+A live demo is available on the [Esri Leaflet website](http://esri.github.io/esri-leaflet/examples/visualize-points-as-a-heatmap.html).
 
 ### Example
 Here is a quick example to get you started. Just change the paths to point to the proper libraries and go.
 
-![Demo Image](https://github.com/Esri/esri-leaflet-clustered-feature-layer/raw/master/esri-leaflet-clustered-feature-layer.jpg)
+<a href="http://esri.github.io/esri-leaflet/examples/visualize-points-as-a-heatmap.html">
+  <img src="https://github.com/Esri/esri-leaflet-clustered-feature-layer/raw/master/esri-leaflet-clustered-feature-layer.jpg" alt="Demo">
+</a>
 
 ```html
 <html>
@@ -30,7 +32,7 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/leaflet.markercluster.js"></script>
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-clustered-feature-layer/0.0.1-beta.1/esri-leaflet-clustered-feature-layer.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-clustered-feature-layer/0.0.1-beta.2/esri-leaflet-clustered-feature-layer.js"></script>
 
   <style>
     body {margin:0;padding:0;}
