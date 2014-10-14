@@ -8,7 +8,7 @@ There are [loads of demos](http://patrickarlt.github.io/esri-leaflet/examples/) 
 ### Example
 Here is a quick example to get you started. Just change the paths to point to the proper libraries and go.
 
-![App](./esri-leaflet-clustered-feature-layer.jpg)
+![Demo Image](https://github.com/Esri/esri-leaflet-clustered-feature-layer/raw/master/esri-leaflet-clustered-feature-layer.jpg)
 
 ```html
 <html>
