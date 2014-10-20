@@ -1,6 +1,6 @@
 {
   "name": "esri-leaflet-clustered-feature-layer",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Esri Leaflet plugin for visualizing Feature Layers as clusters with L.markercluster.",
   "main": "dist/esri-leaflet-clustered-feature-layer.js",
   "devDependencies": {
@@ -37,7 +37,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "leaflet": "^0.7.0",
-    "esri-leaflet": "1.0.0-rc.1",
+    "esri-leaflet": "1.0.0-rc.2",
     "leaflet.markercluster": "^0.4.0"
   }
 }
