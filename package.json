@@ -36,8 +36,8 @@
   "license": "Apache",
   "readmeFilename": "README.md",
   "dependencies": {
-    "leaflet": "0.7.3",
-    "esri-leaflet": "git@github.com:Esri/esri-leaflet.git",
+    "leaflet": "^0.7.3",
+    "esri-leaflet": "^1.0.0",
     "leaflet.markercluster": "^0.4.0"
   }
 }
