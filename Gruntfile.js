@@ -92,28 +92,6 @@ module.exports = function(grunt) {
       }
     },
 
-    s3: {
-      options: {
-        key: '<%= aws.key %>',
-        secret: '<%= aws.secret %>',
-        bucket: '<%= aws.bucket %>',
-        access: 'public-read',
-        headers: {
-          // 1 Year cache policy (1000 * 60 * 60 * 24 * 365)
-          'Cache-Control': 'max-age=630720000, public',
-          'Expires': new Date(Date.now() + 63072000000).toUTCString()
-        }
-      },
-      upload: {
-        upload: [
-          {
-            src: 'dist/**/*',
-            dest: '<%= pkg.name %>/<%= pkg.version %>/'
-          }
-        ]
-      }
-    },
-
     releaseable: {
       release: {
         options: {
@@ -125,12 +103,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  var awsExists = fs.existsSync(process.env.HOME + '/esri-leaflet-s3.json');
-
-  if (awsExists) {
-    grunt.config.set('aws', grunt.file.readJSON(process.env.HOME + '/esri-leaflet-s3.json'));
-  }
 
   // Development Tasks
   grunt.registerTask('default', ['watch']);
