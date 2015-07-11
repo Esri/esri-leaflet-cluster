@@ -95,6 +95,7 @@ module.exports = function(grunt) {
     releaseable: {
       release: {
         options: {
+          build: 'npm run prepublish',
           remote: 'upstream',
           dryRun: grunt.option('dryRun') ? grunt.option('dryRun') : false,
           silent: false

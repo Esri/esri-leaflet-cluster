@@ -1,6 +1,6 @@
 {
   "name": "esri-leaflet-clustered-feature-layer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Esri Leaflet plugin for visualizing Feature Layers as clusters with L.markercluster.",
   "main": "dist/esri-leaflet-clustered-feature-layer.js",
   "devDependencies": {
@@ -24,9 +24,9 @@
     "load-grunt-tasks": "^0.4.0"
   },
   "scripts": {
-    "prepublish": "node -e \"require('grunt').tasks(['prepublish']);\"",
-    "start": "node -e \"require('grunt').tasks(['default']);\"",
-    "test": "node -e \"require('grunt').tasks(['test']);\""
+    "prepublish": "grunt prepublish",
+    "start": "grunt default",
+    "test": "grunt test"
   },
   "author": "Patrick Arlt <parlt@esri.com> (http://patrickarlt.com)",
   "contributors": [
