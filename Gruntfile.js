@@ -109,7 +109,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['jshint', 'karma:coverage', 'concat', 'uglify']);
   grunt.registerTask('test', ['jshint', 'karma:run']);
   grunt.registerTask('prepublish', ['concat', 'uglify']);
-  grunt.registerTask('release', ['releaseable', 's3']);
+  grunt.registerTask('release', ['releaseable']);
 
   // Require all grunt modules
   require('load-grunt-tasks')(grunt);
