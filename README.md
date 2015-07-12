@@ -26,7 +26,8 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
   <!-- Load Esri Leaflet from CDN -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.6/esri-leaflet.js"></script>
+  <script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+
 
   <!-- Include Leaflet.markercluster via rawgit.com, do not use in production -->
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/MarkerCluster.Default.css">
@@ -34,7 +35,7 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/leaflet.markercluster.js"></script>
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-clustered-feature-layer/0.0.1-beta.2/esri-leaflet-clustered-feature-layer.js"></script>
+  <script src="//cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js"></script>
 
   <style>
     body {margin:0;padding:0;}
@@ -79,8 +80,8 @@ Make Sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed
 
 ### Dependencies
 
-* [Leaflet](http://leaflet.com) version 0.7 or higher is required and the latest version is recommended.
-* [Esri Leaflet](http://esri.github.io/esri-leaflet/) beta 5 or or higher is required but the latest version is recommended.
+* [Leaflet](http://leaflet.com) version 0.7.3 is required.
+* [Esri Leaflet](http://esri.github.io/esri-leaflet/) 1.0.0 or or higher is required.
 * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version 0.4 is required.
 
 ### Resources
