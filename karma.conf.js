@@ -18,9 +18,9 @@ module.exports = function(config) {
       'node_modules/leaflet.markercluster/dist/leaflet.markercluster.js',
       'node_modules/leaflet.markercluster/dist/MarkerCluster.css',
       'node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css',
-      'node_modules/esri-leaflet/dist/esri-leaflet-src.js',
+      'node_modules/esri-leaflet/dist/esri-leaflet.js',
       'spec/**/*Spec.js',
-      'src/ClusteredFeatureLayer.js'
+      'dist/esri-leaflet-clustered-feature-layer.js'
     ],
 
     // list of files to exclude
