@@ -63,9 +63,6 @@
 
     var layer = L.esri.Cluster.clusteredFeatureLayer({
       url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0',
-      pointToLayer: function(feature, latlng){
-          return L.circleMarker(latlng);
-        }
     }).addTo(map);
 
     layer.on('clusterclick', function(e) {
