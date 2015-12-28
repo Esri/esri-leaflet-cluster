@@ -64,10 +64,6 @@
     var layer = L.esri.Cluster.clusteredFeatureLayer({
       url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0',
     }).addTo(map);
-
-    layer.on('clusterclick', function(e) {
-      console.log(e);
-    })
   </script>
 
   </body>
