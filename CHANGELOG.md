@@ -2,8 +2,9 @@
 
 ## [2.0.0-beta.1]
 
-### Breaking
+### Breaking Changes
 
+* Namespace change (~~`L.esri.clusteredFeatureLayer`~~ is now `L.esri`**.Cluster.**`clusteredFeatureLayer` )
 * Requires the 2.0.0-beta.6 release of Esri Leaflet.
 * Requires the 1.0.0-beta.2 release of Leaflet.
 
