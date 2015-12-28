@@ -39,7 +39,7 @@ describe('ClusteredFeatureLayer', function () {
     }
   }];
   beforeEach(function(){
-    layer = L.esri.clusteredFeatureLayer({
+    layer = L.esri.Cluster.clusteredFeatureLayer({
       url: 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/MockFeatureServer/0',
       timeField: 'time',
       pointToLayer: function(feature, latlng){
@@ -166,7 +166,7 @@ describe('ClusteredFeatureLayer', function () {
 
   it('should run a function against every feature', function(){
     var spy = sinon.spy();
-    layer = L.esri.clusteredFeatureLayer({
+    layer = L.esri.Cluster.clusteredFeatureLayer({
       url: 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/MockFeatureServer/0',
       onEachFeature: spy
     }).addTo(map);
@@ -174,7 +174,7 @@ describe('ClusteredFeatureLayer', function () {
     expect(spy.callCount).to.equal(2);
   });
 
-  it('should iterate over each feautre', function(){
+  it('should iterate over each feature', function(){
     var spy = sinon.spy();
     layer.eachFeature(spy);
     expect(spy).to.have.been.calledWith(layer.getFeature(1));
@@ -190,7 +190,7 @@ describe('ClusteredFeatureLayer', function () {
     expect(layer.getFeature(2).options.fill).to.equal('red');
   });
 
-  it('should change styles on feautres with a function', function(){
+  it('should change styles on features with a function', function(){
     layer.setStyle(function(){
       return {
         fill: 'red'
