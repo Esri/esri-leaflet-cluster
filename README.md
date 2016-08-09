@@ -22,20 +22,21 @@ Here is a quick example to get you started. Just change the paths to point to th
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
   <!-- Load Leaflet from CDN-->
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet-src.js"></script>
 
   <!-- Load Esri Leaflet from CDN -->
-  <script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+  <script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.2/esri-leaflet.js"></script>
 
+  <!-- Include Leaflet.markercluster via rawgit.com
+in production you'd be better off hosting these libraries yourself -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-rc.1/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-rc.1/dist/MarkerCluster.css">
+  <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-rc.1/dist/leaflet.markercluster.js"></script>
 
-  <!-- Include Leaflet.markercluster via rawgit.com, do not use in production -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/MarkerCluster.Default.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/MarkerCluster.css">
-  <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/leaflet.markercluster.js"></script>
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="//cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js"></script>
+  <script src="https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/2.0.0-beta.1/esri-leaflet-clustered-feature-layer.js"></script>
 
   <style>
     body {margin:0;padding:0;}
@@ -50,8 +51,8 @@ Here is a quick example to get you started. Just change the paths to point to th
   var map = L.map('map').setView([45.526, -122.667], 15);
 
   L.esri.basemapLayer('Streets').addTo(map);
-  L.esri.clusteredFeatureLayer({
-    url: 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0'
+  L.esri.Cluster.clusteredFeatureLayer({
+    url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0'
   }).addTo(map);
 </script>
 
@@ -80,9 +81,15 @@ Make Sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed
 
 ### Dependencies
 
-* [Leaflet](http://leaflet.com) version 0.7.3 is required.
-* [Esri Leaflet](http://esri.github.io/esri-leaflet/) 1.0.0 or or higher is required.
-* [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version 0.4 is required.
+* version [1.0.2](https://github.com/Esri/esri-leaflet-clustered-feature-layer/releases/tag/v1.0.2) (available on [CDN](https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js)) can be used in apps alongside:
+  *  [Leaflet](http://leafletjs.com) version `0.7.x`.
+  * Esri Leaflet version `1.x`
+  * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version `0.4`
+
+* version [2.0.0-beta.1](https://github.com/Esri/esri-leaflet-clustered-feature-layer/releases/tag/v2.0.0-beta.1) (available on [CDN](https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/2.0.0-beta.1/esri-leaflet-clustered-feature-layer.js)) can be used in apps alongside:
+  *  [Leaflet](http://leafletjs.com) version `1.0.0-rc.3`.
+  * Esri Leaflet version `2.x`
+  * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version `1.0.0-rc.1`
 
 ### Resources
 
