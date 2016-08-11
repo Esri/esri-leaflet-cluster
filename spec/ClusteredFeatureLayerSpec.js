@@ -121,16 +121,16 @@ describe('ClusteredFeatureLayer', function () {
   });
 
   it('should bind popups to existing features', function(){
-    layer.bindPopup(function(feature){
-      return 'ID: ' + feature.id;
+    layer.bindPopup(function(layer){
+      return 'ID: ' + layer.feature.id;
     });
     expect(layer.getFeature(1)._popup.getContent()).to.equal('ID: 1');
     expect(layer.getFeature(2)._popup.getContent()).to.equal('ID: 2');
   });
 
   it('should bind popups to new features', function(){
-    layer.bindPopup(function(feature){
-      return 'ID: ' + feature.id;
+    layer.bindPopup(function(layer){
+      return 'ID: ' + layer.feature.id;
     });
 
     layer.createLayers([{
