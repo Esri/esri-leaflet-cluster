@@ -68,7 +68,7 @@ export var ClusteredFeatureLayer = FeatureManager.extend({
 
         // bind a popup if we have one
         if (this._popup && newLayer.bindPopup) {
-          newLayer.bindPopup(this._popup(newLayer.feature, newLayer));
+          newLayer.bindPopup(this._popup(newLayer, newLayer.feature));
         }
 
         // cache the layer
@@ -166,7 +166,7 @@ export var ClusteredFeatureLayer = FeatureManager.extend({
     this._popup = fn;
     for (var i in this._layers) {
       var layer = this._layers[i];
-      var popupContent = this._popup(layer.feature, layer);
+      var popupContent = this._popup(layer, layer.feature);
       layer.bindPopup(popupContent, options);
     }
   },
