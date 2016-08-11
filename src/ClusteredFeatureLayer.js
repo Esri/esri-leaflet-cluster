@@ -66,11 +66,6 @@ export var ClusteredFeatureLayer = FeatureManager.extend({
 
         this.resetStyle(newLayer.feature.id);
 
-        // bind a popup if we have one
-        if (this._popup && newLayer.bindPopup) {
-          newLayer.bindPopup(this._popup(newLayer, newLayer.feature));
-        }
-
         // cache the layer
         this._layers[newLayer.feature.id] = newLayer;
 
@@ -155,26 +150,6 @@ export var ClusteredFeatureLayer = FeatureManager.extend({
     }
     if (layer.setStyle) {
       layer.setStyle(style);
-    }
-  },
-
-  /**
-   * Popup Methods
-   */
-
-  bindPopup: function (fn, options) {
-    this._popup = fn;
-    for (var i in this._layers) {
-      var layer = this._layers[i];
-      var popupContent = this._popup(layer, layer.feature);
-      layer.bindPopup(popupContent, options);
-    }
-  },
-
-  unbindPopup: function () {
-    this._popup = false;
-    for (var i in this._layers) {
-      this._layers[i].unbindPopup();
     }
   },
 
