@@ -120,43 +120,6 @@ describe('ClusteredFeatureLayer', function () {
     expect(map.hasLayer(layer.cluster)).to.equal(false);
   });
 
-  it('should bind popups to existing features', function(){
-    layer.bindPopup(function(feature){
-      return 'ID: ' + feature.id;
-    });
-    expect(layer.getFeature(1)._popup.getContent()).to.equal('ID: 1');
-    expect(layer.getFeature(2)._popup.getContent()).to.equal('ID: 2');
-  });
-
-  it('should bind popups to new features', function(){
-    layer.bindPopup(function(feature){
-      return 'ID: ' + feature.id;
-    });
-
-    layer.createLayers([{
-      type: 'Feature',
-      id: 3,
-      geometry: {
-        type: 'Point',
-        coordinates: [-123, 46]
-      },
-      properties: {
-        time: new Date('Febuary 24 2014').valueOf()
-      }
-    }]);
-
-    expect(layer.getFeature(3)._popup.getContent()).to.equal('ID: 3');
-  });
-
-  it('should unbind popups on features', function(){
-    layer.bindPopup(function(feature){
-      return 'ID: ' + feature.id;
-    });
-    layer.unbindPopup();
-    expect(layer.getFeature(1)._popup).to.equal(null);
-    expect(layer.getFeature(2)._popup).to.equal(null);
-  });
-
   it('should iterate over each feautre', function(){
     var spy = sinon.spy();
     layer.eachFeature(spy);
