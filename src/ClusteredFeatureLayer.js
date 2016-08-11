@@ -1,9 +1,9 @@
-export var VERSION = '2.0.0-beta.1';
+export {version as VERSION} from '../package.json';
 
 import L from 'leaflet';
 import { FeatureManager } from 'esri-leaflet';
 
-export var ClusteredFeatureLayer = FeatureManager.extend({
+export var FeatureLayer = FeatureManager.extend({
 
   statics: {
     EVENTS: 'click dblclick mouseover mouseout mousemove contextmenu popupopen popupclose',
@@ -25,12 +25,7 @@ export var ClusteredFeatureLayer = FeatureManager.extend({
     this.cluster = L.markerClusterGroup(options);
     this._key = 'c' + (Math.random() * 1e9).toString(36).replace('.', '_');
 
-    // @TODO enable at Leaflet 0.8
     this.cluster.addEventParent(this);
-
-    // @TODO remove from Leaflet 0.8
-    // this.cluster.on(ClusteredFeatureLayer.EVENTS, this._propagateEvent, this);
-    // this.cluster.on(ClusteredFeatureLayer.CLUSTEREVENTS, this._propagateClusterEvent, this);
   },
 
   /**
@@ -167,29 +162,10 @@ export var ClusteredFeatureLayer = FeatureManager.extend({
   getFeature: function (id) {
     return this._layers[id];
   }
-
-  // from https://github.com/Leaflet/Leaflet/blob/v0.7.2/src/layer/FeatureGroup.js
-  //  @TODO remove at Leaflet 0.8
-  // _propagateEvent: function (e) {
-  //   e = L.extend({
-  //     layer: this._layers[this._leafletIds[e.target._leaflet_id]],
-  //     target: this
-  //   }, e);
-  //   this.fire(e.type, e);
-  // },
-
-  // _propagateClusterEvent: function (e) {
-  //   e = L.extend({
-  //     layer: e.target,
-  //     target: this
-  //   }, e);
-  //   this.fire(e.type, e);
-  // }
-
 });
 
-export function clusteredFeatureLayer (options) {
-  return new ClusteredFeatureLayer(options);
+export function featureLayer (options) {
+  return new FeatureLayer(options);
 }
 
-export default clusteredFeatureLayer;
+export default featureLayer;
