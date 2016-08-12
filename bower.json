@@ -1,6 +1,5 @@
 {
   "name": "esri-leaflet-clustered-feature-layer",
-  "version": "v2.0.0-beta.1",
   "main": "dist/esri-leaflet-clustered-feature-layer.js",
   "dependencies": {
     "esri-leaflet": "^2.0.0",
