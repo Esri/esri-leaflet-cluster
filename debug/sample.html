@@ -18,7 +18,7 @@
     <script src="../node_modules/esri-leaflet/dist/esri-leaflet.js"></script>
 
     <!-- load clustered feature layer source for debugging -->
-    <script src="../dist/esri-leaflet-clustered-feature-layer.js"></script>
+    <script src="../dist/esri-leaflet-cluster-debug.js"></script>
 
     <style>
       body {
@@ -61,9 +61,14 @@
 
     L.esri.basemapLayer('Streets').addTo(map);
 
-    var layer = L.esri.Cluster.clusteredFeatureLayer({
+    var clusterLayer = L.esri.Cluster.featureLayer({
       url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0',
     }).addTo(map);
+    
+    clusterLayer.bindPopup(function (layer) {
+      console.log(layer)
+      return layer.feature.properties.stop_desc;
+    })
   </script>
 
   </body>

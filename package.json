@@ -3,40 +3,24 @@
   "description": "Esri Leaflet plugin for visualizing Feature Layers as clusters with L.markercluster.",
   "version": "2.0.0-beta.1",
   "author": "Patrick Arlt <parlt@esri.com> (http://patrickarlt.com)",
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "whitelist": [
-            "es6.modules"
-          ],
-          "loose": [
-            "es6.modules"
-          ]
-        }
-      ]
-    ]
-  },
   "contributors": [
     "Patrick Arlt <parlt@esri.com> (http://patrickarlt.com)",
     "John Gravois <jgravois@esri.com> (http://johngravois.com)"
   ],
   "dependencies": {
-    "esri-leaflet": "^2.0.0-beta.6",
-    "leaflet": "^1.0.0-beta.2",
-    "leaflet.markercluster": "git+https://github.com/Leaflet/Leaflet.markercluster.git#v1.0.0-beta.2.0"
+    "esri-leaflet": "^2.0.0",
+    "leaflet": "^1.0.0-rc.3",
+    "leaflet.markercluster": "git+https://github.com/Leaflet/Leaflet.markercluster.git#v1.0.0-rc.1"
   },
   "devDependencies": {
-    "babelify": "^6.1.3",
     "chai": "2.3.0",
     "gh-release": "^2.0.0",
     "http-server": "^0.8.5",
     "isparta": "^3.0.3",
-    "istanbul": "gotwarlost/istanbul.git#source-map",
+    "istanbul": "^0.4.2",
     "karma": "^0.12.24",
     "karma-chai-sinon": "^0.1.3",
-    "karma-coverage": "douglasduteil/karma-coverage#next",
+    "karma-coverage": "^0.5.3",
     "karma-mocha": "^0.1.0",
     "karma-mocha-reporter": "^0.2.5",
     "karma-phantomjs-launcher": "^0.1.4",
@@ -44,24 +28,33 @@
     "mkdirp": "^0.5.1",
     "node-sass": "^3.2.0",
     "phantomjs": "^1.9.17",
-    "rollup": "^0.10.0",
+    "rollup": "^0.25.4",
+    "rollup-plugin-json": "^2.0.0",
+    "rollup-plugin-node-resolve": "^1.4.0",
+    "rollup-plugin-uglify": "^0.3.1",
     "semistandard": "^7.0.4",
     "sinon": "^1.11.1",
     "sinon-chai": "2.7.0",
-    "uglify-js": "^2.4.23"
+    "snazzy": "^2.0.1",
+    "watch": "^0.17.1"
   },
   "homepage": "https://github.com/Esri/esri-leaflet-clustered-feature-layer",
-  "jsnext:main": "src/HeatmapFeatureLayer.js",
+  "jsnext:main": "src/ClusteredFeatureLayer.js",
   "jspm": {
-    "files": [
-      "src/*.js",
-      "dist/*"
-    ],
     "registry": "npm",
-    "format": "es6"
+    "format": "es6",
+    "main": "src/ClusteredFeatureLayer.js"
   },
+  "keywords": [
+    "arcgis",
+    "esri",
+    "esri leaflet",
+    "gis",
+    "leaflet plugin",
+    "mapping"
+  ],
   "license": "Apache-2.0",
-  "main": "dist/esri-leaflet-clustered-feature-layer.js",
+  "main": "dist/esri-leaflet-cluster-debug.js",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
@@ -69,12 +62,12 @@
   },
   "scripts": {
     "prebuild": "mkdirp dist",
-    "build": "node ./scripts/build.js",
-    "lint": "semistandard src/*.js",
+    "build": "rollup -c profiles/debug.js & rollup -c profiles/production.js",
+    "lint": "semistandard src/*.js | snazzy",
     "prepublish": "npm run build",
     "pretest": "npm run build",
     "release": "./scripts/release.sh",
-    "serve": "watch 'npm run build' src & http-server -p 5678 -c-1 -o",
+    "start": "watch 'npm run build' src & http-server -p 5678 -c-1 -o",
     "test": "npm run lint && karma start"
   }
 }

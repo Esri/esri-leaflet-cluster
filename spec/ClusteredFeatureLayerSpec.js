@@ -39,7 +39,7 @@ describe('ClusteredFeatureLayer', function () {
     }
   }];
   beforeEach(function(){
-    layer = L.esri.Cluster.clusteredFeatureLayer({
+    layer = L.esri.Cluster.featureLayer({
       url: 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/MockFeatureServer/0',
       timeField: 'time',
       pointToLayer: function(feature, latlng){
@@ -129,7 +129,7 @@ describe('ClusteredFeatureLayer', function () {
 
   it('should run a function against every feature', function(){
     var spy = sinon.spy();
-    layer = L.esri.Cluster.clusteredFeatureLayer({
+    layer = L.esri.Cluster.featureLayer({
       url: 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/MockFeatureServer/0',
       onEachFeature: spy
     }).addTo(map);
