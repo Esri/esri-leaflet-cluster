@@ -1,7 +1,7 @@
 {
-  "name": "esri-leaflet-clustered-feature-layer",
+  "name": "esri-leaflet-cluster",
   "description": "Esri Leaflet plugin for visualizing Feature Layers as clusters with L.markercluster.",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0",
   "author": "Patrick Arlt <parlt@esri.com> (http://patrickarlt.com)",
   "contributors": [
     "Patrick Arlt <parlt@esri.com> (http://patrickarlt.com)",
@@ -38,7 +38,7 @@
     "snazzy": "^2.0.1",
     "watch": "^0.17.1"
   },
-  "homepage": "https://github.com/Esri/esri-leaflet-clustered-feature-layer",
+  "homepage": "https://github.com/Esri/esri-leaflet-cluster",
   "jsnext:main": "src/ClusteredFeatureLayer.js",
   "jspm": {
     "registry": "npm",
@@ -58,7 +58,7 @@
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Esri/esri-leaflet-clustered-feature-layer.git"
+    "url": "git+https://github.com/Esri/esri-leaflet-cluster.git"
   },
   "scripts": {
     "prebuild": "mkdirp dist",
