@@ -1,6 +1,6 @@
-# Esri Leaflet Clustered Feature Layer
+# Esri Leaflet Cluster
 
-[![Build Status](https://travis-ci.org/Esri/esri-leaflet-clustered-feature-layer.svg?branch=master)](https://travis-ci.org/Esri/esri-leaflet-clustered-feature-layer)
+[![Build Status](https://travis-ci.org/Esri/esri-leaflet-cluster.svg?branch=master)](https://travis-ci.org/Esri/esri-leaflet-cluster)
 
 > enables visualization of ArcGIS Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
@@ -11,7 +11,7 @@ A live demo is available on the [Esri Leaflet website](http://esri.github.io/esr
 Here is a quick example to get you started. Just change the paths to point to the proper libraries and go.
 
 <a href="http://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html">
-  <img src="https://github.com/Esri/esri-leaflet-clustered-feature-layer/raw/master/esri-leaflet-clustered-feature-layer.jpg" alt="Demo">
+  <img src="https://github.com/Esri/esri-leaflet-cluster/raw/master/esri-leaflet-clustered-feature-layer.jpg" alt="Demo">
 </a>
 
 ```html
@@ -51,7 +51,7 @@ in production you'd be better off hosting these libraries yourself -->
   var map = L.map('map').setView([45.526, -122.667], 15);
 
   L.esri.basemapLayer('Streets').addTo(map);
-  L.esri.Cluster.clusteredFeatureLayer({
+  L.esri.Cluster.featureLayer({
     url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0'
   }).addTo(map);
 </script>
