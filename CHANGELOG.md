@@ -1,5 +1,31 @@
 # Changelog
 
+## [Unreleased][unreleased]
+
+## [2.0.0]
+
+### Breaking Changes
+
+* Namespace change (~~`L.esri.Cluster.clusteredFeatureLayer`~~ is now `L.esri.Cluster.featureLayer` )
+* repository and npm package have been renamed esri-leaflet-cluster~~ed-feature-layer~~ for brevity's sake
+
+### Added
+
+* The build system has been refactored to use latest Rollup and Rollup plugins.
+* Reworked bundling directives for various modules systems to resolve and simplify various issues
+  * WebPack users no longer have to use the Babel loader.
+  * Babelify with Babel 6 now works
+
+### Removed
+
+* `bindPopup` and `unbindPopup` logic have been removed from this plugin.  Equivalent functionality is available via [`L.Layer`](http://leafletjs.com/reference-1.0.0.html#layer-bindpopup) in Leaflet itself.
+
+```js
+clusterLayer.bindPopup(function (layer) {
+  return "attribute value is: " + layer.feature.properties.ATTRIBUTENAME;
+})
+```
+
 ## [2.0.0-beta.1]
 
 ### Breaking Changes
@@ -45,6 +71,8 @@
 
 ## Release Candidate 1
 
+[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0-beta.1...v2.0.0
 [2.0.0-beta.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v1.0.2...v2.0.0-beta.1
 [1.0.2]: https://github.com/Esri/esri-leaflet-clustered-layer/compare/v1.0.0...v1.0.2
 [1.0.0]: https://github.com/Esri/esri-leaflet-clustered-layer/compare/v1.0.0-rc.4...v1.0.0

@@ -1,8 +1,8 @@
-# Esri Leaflet Clustered Feature Layer
+# Esri Leaflet Cluster
 
-[![Build Status](https://travis-ci.org/Esri/esri-leaflet-clustered-feature-layer.svg?branch=master)](https://travis-ci.org/Esri/esri-leaflet-clustered-feature-layer)
+[![Build Status](https://travis-ci.org/Esri/esri-leaflet-cluster.svg?branch=master)](https://travis-ci.org/Esri/esri-leaflet-cluster)
 
-A plugin for Esri Leaflet that enables visualization of Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
+> enables visualization of ArcGIS Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
 ### Demos
 A live demo is available on the [Esri Leaflet website](http://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html).
@@ -11,7 +11,7 @@ A live demo is available on the [Esri Leaflet website](http://esri.github.io/esr
 Here is a quick example to get you started. Just change the paths to point to the proper libraries and go.
 
 <a href="http://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html">
-  <img src="https://github.com/Esri/esri-leaflet-clustered-feature-layer/raw/master/esri-leaflet-clustered-feature-layer.jpg" alt="Demo">
+  <img src="https://github.com/Esri/esri-leaflet-cluster/raw/master/esri-leaflet-clustered-feature-layer.jpg" alt="Demo">
 </a>
 
 ```html
@@ -36,7 +36,7 @@ in production you'd be better off hosting these libraries yourself -->
 
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/2.0.0-beta.1/esri-leaflet-clustered-feature-layer.js"></script>
+  <script src="https://cdn.jsdelivr.net/leaflet.esri.cluster/2.0.0/esri-leaflet-cluster.js"></script>
 
   <style>
     body {margin:0;padding:0;}
@@ -51,7 +51,7 @@ in production you'd be better off hosting these libraries yourself -->
   var map = L.map('map').setView([45.526, -122.667], 15);
 
   L.esri.basemapLayer('Streets').addTo(map);
-  L.esri.Cluster.clusteredFeatureLayer({
+  L.esri.Cluster.featureLayer({
     url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0'
   }).addTo(map);
 </script>
@@ -109,10 +109,10 @@ You can also post issues on the [GIS Stackexchange](http://gis.stackexchange.com
 
 ### Contributing
 
-Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/Esri/esri-leaflet-clustered-feature-layer/blob/master/CONTRIBUTING.md).
+Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/Esri/esri-leaflet/blob/master/CONTRIBUTING.md).
 
 ### Licensing
-Copyright 2013 Esri
+Copyright 2016 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
