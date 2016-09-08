@@ -36,7 +36,7 @@ in production you'd be better off hosting these libraries yourself -->
 
 
   <!-- Load Clustered Feature Layer from CDN -->
-  <script src="https://cdn.jsdelivr.net/leaflet.esri.cluster/2.0.0/esri-leaflet-cluster.js"></script>
+  <script src="https://unpkg.com/esri-leaflet-cluster@2.0.0"></script>
 
   <style>
     body {margin:0;padding:0;}
