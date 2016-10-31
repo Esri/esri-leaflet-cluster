@@ -62,11 +62,7 @@ in production you'd be better off hosting these libraries yourself -->
 
 ### Documentation & Examples
 
-A full [API Reference](http://esri.github.io/esri-leaflet/api-reference/) and plenty of [sample code](http://esri.github.io/esri-leaflet/examples/) can be found at the [Esri Leaflet](http://esri.github.io/esri-leaflet/) website.
-
-### Development Roadmap
-
-If you are interested in contributing to Esri Leaflet or are interetsed in seeing what is coming up next checkout the [development roadmap](https://github.com/Esri/esri-leaflet/wiki/Roadmap).
+A full [API Reference](http://esri.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html) and examples can be found on the [Esri Leaflet](http://esri.github.io/esri-leaflet/) website.
 
 ### Development Instructions
 
@@ -81,13 +77,13 @@ Make Sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed
 
 ### Dependencies
 
-* version [1.0.2](https://github.com/Esri/esri-leaflet-clustered-feature-layer/releases/tag/v1.0.2) (available on [CDN](https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js)) can be used in apps alongside:
+* version [1.0.2](https://github.com/Esri/esri-leaflet-cluster/releases/tag/v1.0.2) (available on [CDN](https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js)) can be used in apps alongside:
   *  [Leaflet](http://leafletjs.com) version `0.7.x`.
   * Esri Leaflet version `1.x`
   * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version `0.4`
 
-* version [2.0.0-beta.1](https://github.com/Esri/esri-leaflet-clustered-feature-layer/releases/tag/v2.0.0-beta.1) (available on [CDN](https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/2.0.0-beta.1/esri-leaflet-clustered-feature-layer.js)) can be used in apps alongside:
-  *  [Leaflet](http://leafletjs.com) version `1.0.0-rc.3`.
+* version [2.0.0](https://github.com/Esri/esri-leaflet-cluster/releases/tag/v2.0.0) (available on [CDN](https://unpkg.com/esri-leaflet-cluster@2.0.0)) can be used in apps alongside:
+  *  [Leaflet](http://leafletjs.com) version `1.0.0`.
   * Esri Leaflet version `2.x`
   * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version `1.0.0-rc.1`
 
