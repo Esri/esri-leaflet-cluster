@@ -66,13 +66,13 @@ A full [API Reference](http://esri.github.io/esri-leaflet/api-reference/layers/c
 
 ### Development Instructions
 
-Make Sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed.
+If you'd like to inspect and modify the source of Esri Leaflet Cluster, follow the instructions below to set up a local development environment.
 
-1. [Fork and clone this repo](https://help.github.com/articles/fork-a-repo)
-2. `cd` into the `esri-leaflet` folder
-3. Install the dependencies with `npm install`
-4. run `grunt` from the command line. This will start watching the source files and running linting and testing commands.
-5. Open `debug/sample.html` which will load up a development environment.
+1. [Fork and clone Esri Leaflet Cluster](https://help.github.com/articles/fork-a-repo)
+2. `cd` into the `esri-leaflet-cluster` folder
+3. Install the [`package.json`](https://github.com/Esri/esri-leaflet/blob/master/package.json#L14-L49) dependencies by running `npm install`
+4. Run `npm start` from the command line. This will compile minified source in a brand new `dist` directory, launch a tiny webserver and begin watching the raw source for changes.
+5. Run `npm test` to make sure you haven't introduced a new 'feature' accidentally.
 6. Make your changes and create a [pull request](https://help.github.com/articles/creating-a-pull-request)
 
 ### Dependencies
