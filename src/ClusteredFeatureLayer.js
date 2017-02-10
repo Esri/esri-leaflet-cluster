@@ -54,30 +54,30 @@ export var FeatureLayer = FeatureManager.extend({
       var layer = this._layers[geojson.id];
 
       if (!layer) {
-        var newLayer = L.GeoJSON.geometryToLayer(geojson, this.options);
-        newLayer.feature = L.GeoJSON.asFeature(geojson);
-        newLayer.defaultOptions = newLayer.options;
-        newLayer._leaflet_id = this._key + '_' + geojson.id;
+        layer = L.GeoJSON.geometryToLayer(geojson, this.options);
+        layer.feature = L.GeoJSON.asFeature(geojson);
+        layer.defaultOptions = layer.options;
+        layer._leaflet_id = this._key + '_' + geojson.id;
 
-        this.resetStyle(newLayer.feature.id);
+        this.resetStyle(layer.feature.id);
 
         // cache the layer
-        this._layers[newLayer.feature.id] = newLayer;
+        this._layers[layer.feature.id] = layer;
 
-        this._leafletIds[newLayer._leaflet_id] = geojson.id;
+        this._leafletIds[layer._leaflet_id] = geojson.id;
 
         if (this.options.onEachFeature) {
-          this.options.onEachFeature(newLayer.feature, newLayer);
+          this.options.onEachFeature(layer.feature, layer);
         }
 
         this.fire('createfeature', {
-          feature: newLayer.feature
+          feature: layer.feature
         });
+      }
 
-        // add the layer if it is within the time bounds or our layer is not time enabled
-        if (!this.options.timeField || (this.options.timeField && this._featureWithinTimeRange(geojson))) {
-          markers.push(newLayer);
-        }
+      // add the layer if it is within the time bounds or our layer is not time enabled
+      if (!this.options.timeField || (this.options.timeField && this._featureWithinTimeRange(geojson))) {
+        markers.push(layer);
       }
     }
 
