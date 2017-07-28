@@ -1,10 +1,10 @@
 {
-  "name": "esri-leaflet-clustered-feature-layer",
-  "main": "dist/esri-leaflet-clustered-feature-layer.js",
+  "name": "esri-leaflet-cluster",
+  "main": "dist/esri-leaflet-cluster.js",
   "dependencies": {
     "esri-leaflet": "^2.0.0",
-    "leaflet": "^1.0.0-rc.3",
-    "leaflet.markercluster": "git+https://github.com/Leaflet/Leaflet.markercluster.git#v1.0.0-rc.1"
+    "leaflet": "^1.0.0",
+    "leaflet.markercluster": "^1.0.0"
   },
   "ignore": [
     "**/.*",
