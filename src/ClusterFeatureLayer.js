@@ -1,4 +1,4 @@
-export {version as VERSION} from '../package.json';
+export { version as VERSION } from '../package.json';
 
 import L from 'leaflet';
 import { FeatureManager } from 'esri-leaflet';

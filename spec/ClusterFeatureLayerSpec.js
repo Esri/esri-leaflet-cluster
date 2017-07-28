@@ -1,5 +1,7 @@
-describe('ClusteredFeatureLayer', function () {
-  function createMap(){
+/* eslint-env mocha */
+/* eslint-disable handle-callback-err */
+describe('ClusterFeatureLayer', function () {
+  function createMap () {
     // create container
     var container = document.createElement('div');
 
@@ -27,7 +29,7 @@ describe('ClusteredFeatureLayer', function () {
     properties: {
       time: new Date('January 1 2014').valueOf()
     }
-  },{
+  }, {
     type: 'Feature',
     id: 2,
     geometry: {
@@ -38,11 +40,11 @@ describe('ClusteredFeatureLayer', function () {
       time: new Date('Febuary 1 2014').valueOf()
     }
   }];
-  beforeEach(function(){
+  beforeEach(function () {
     layer = L.esri.Cluster.featureLayer({
       url: 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/MockFeatureServer/0',
       timeField: 'time',
-      pointToLayer: function(feature, latlng){
+      pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng);
       }
     });
@@ -50,26 +52,26 @@ describe('ClusteredFeatureLayer', function () {
     layer.createLayers(features);
   });
 
-  it('should create features on a cluster', function(){
+  it('should create features on a cluster', function () {
     expect(layer.cluster.hasLayer(layer.getFeature(1))).to.equal(true);
     expect(layer.cluster.hasLayer(layer.getFeature(2))).to.equal(true);
   });
 
-  it('should remove features on a cluster', function(){
+  it('should remove features on a cluster', function () {
     layer.removeLayers([1]);
 
     expect(layer.cluster.hasLayer(layer.getFeature(1))).to.equal(false);
     expect(layer.cluster.hasLayer(layer.getFeature(2))).to.equal(true);
   });
 
-  it('should fire a removefeature event', function(){
-    layer.on('removefeature', function(e){
+  it('should fire a removefeature event', function () {
+    layer.on('removefeature', function (e) {
       expect(e.feature.id).to.equal(1);
     });
     layer.removeLayers([1]);
   });
 
-  it('should add features back to a cluster', function(){
+  it('should add features back to a cluster', function () {
     layer.removeLayers([1]);
     layer.addLayers([1]);
 
@@ -77,15 +79,15 @@ describe('ClusteredFeatureLayer', function () {
     expect(layer.cluster.hasLayer(layer.getFeature(2))).to.equal(true);
   });
 
-  it('should fire a addfeature event', function(){
-    layer.on('addfeature', function(e){
+  it('should fire a addfeature event', function () {
+    layer.on('addfeature', function (e) {
       expect(e.feature.id).to.equal(1);
     });
     layer.removeLayers([1]);
     layer.addLayers([1]);
   });
 
-  it('should not add features outside the time range', function(){
+  it('should not add features outside the time range', function () {
     layer.setTimeRange(new Date('January 1 2014'), new Date('Febuary 1 2014'));
 
     layer.createLayers([{
@@ -105,14 +107,14 @@ describe('ClusteredFeatureLayer', function () {
     expect(layer.cluster.hasLayer(layer.getFeature(3))).to.equal(false);
   });
 
-  it('should be able to add itself to a map', function(){
+  it('should be able to add itself to a map', function () {
     layer.addTo(map);
 
     expect(map.hasLayer(layer)).to.equal(true);
     expect(map.hasLayer(layer.cluster)).to.equal(true);
   });
 
-  it('should be remove itself from a map', function(){
+  it('should be remove itself from a map', function () {
     layer.addTo(map);
     map.removeLayer(layer);
 
@@ -120,14 +122,14 @@ describe('ClusteredFeatureLayer', function () {
     expect(map.hasLayer(layer.cluster)).to.equal(false);
   });
 
-  it('should iterate over each feautre', function(){
+  it('should iterate over each feautre', function () {
     var spy = sinon.spy();
     layer.eachFeature(spy);
     expect(spy).to.have.been.calledWith(layer.getFeature(1));
     expect(spy).to.have.been.calledWith(layer.getFeature(2));
   });
 
-  it('should run a function against every feature', function(){
+  it('should run a function against every feature', function () {
     var spy = sinon.spy();
     layer = L.esri.Cluster.featureLayer({
       url: 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/MockFeatureServer/0',
@@ -137,14 +139,14 @@ describe('ClusteredFeatureLayer', function () {
     expect(spy.callCount).to.equal(2);
   });
 
-  it('should iterate over each feature', function(){
+  it('should iterate over each feature', function () {
     var spy = sinon.spy();
     layer.eachFeature(spy);
     expect(spy).to.have.been.calledWith(layer.getFeature(1));
     expect(spy).to.have.been.calledWith(layer.getFeature(2));
   });
 
-  it('should change styles on features with an object', function(){
+  it('should change styles on features with an object', function () {
     layer.setStyle({
       fill: 'red'
     });
@@ -153,8 +155,8 @@ describe('ClusteredFeatureLayer', function () {
     expect(layer.getFeature(2).options.fill).to.equal('red');
   });
 
-  it('should change styles on features with a function', function(){
-    layer.setStyle(function(){
+  it('should change styles on features with a function', function () {
+    layer.setStyle(function () {
       return {
         fill: 'red'
       };
@@ -163,5 +165,5 @@ describe('ClusteredFeatureLayer', function () {
     expect(layer.getFeature(1).options.fill).to.equal('red');
     expect(layer.getFeature(2).options.fill).to.equal('red');
   });
-
 });
+/* eslint-enable handle-callback-err */
