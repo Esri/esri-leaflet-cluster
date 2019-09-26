@@ -2,6 +2,12 @@
 
 ## [Unreleased][unreleased]
 
+## [2.0.1]
+
+### Changed
+
+* Updated dependencies ([#20](https://github.com/Esri/esri-leaflet-cluster/pull/20))
+
 ## [2.0.0]
 
 ### Breaking Changes
@@ -72,6 +78,7 @@ clusterLayer.bindPopup(function (layer) {
 ## Release Candidate 1
 
 [unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...HEAD
+[2.0.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0-beta.1...v2.0.0
 [2.0.0-beta.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v1.0.2...v2.0.0-beta.1
 [1.0.2]: https://github.com/Esri/esri-leaflet-clustered-layer/compare/v1.0.0...v1.0.2
