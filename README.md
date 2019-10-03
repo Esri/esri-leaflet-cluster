@@ -5,12 +5,12 @@
 > enables visualization of ArcGIS Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
 ### Demos
-A live demo is available on the [Esri Leaflet website](http://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html).
+A live demo is available on the [Esri Leaflet website](https://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html).
 
 ### Example
 Here is a quick example to get you started. Just change the paths to point to the proper libraries and go.
 
-<a href="http://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html">
+<a href="https://esri.github.io/esri-leaflet/examples/clustering-feature-layers.html">
   <img src="https://github.com/Esri/esri-leaflet-cluster/raw/master/cluster-example.jpg" alt="Demo">
 </a>
 
@@ -67,7 +67,7 @@ Here is a quick example to get you started. Just change the paths to point to th
 
 ### Documentation & Examples
 
-A full [API Reference](http://esri.github.io/esri-leaflet/api-reference/layers/cluster-feature-layer.html) and examples can be found on the [Esri Leaflet](http://esri.github.io/esri-leaflet/) website.
+A full [API Reference](https://esri.github.io/esri-leaflet/api-reference/layers/cluster-feature-layer.html) and examples can be found on the [Esri Leaflet](https://esri.github.io/esri-leaflet/) website.
 
 ### Development Instructions
 
@@ -83,28 +83,27 @@ If you'd like to inspect and modify the source of Esri Leaflet Cluster, follow t
 ### Dependencies
 
 * version [1.0.2](https://github.com/Esri/esri-leaflet-cluster/releases/tag/v1.0.2) (available on [CDN](https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js)) can be used in apps alongside:
-  *  [Leaflet](http://leafletjs.com) version `0.7.x`.
+  *  [Leaflet](https://leafletjs.com) version `0.7.x`.
   * Esri Leaflet version `1.x`
   * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version `0.4`
 
 * version [2.0.0](https://github.com/Esri/esri-leaflet-cluster/releases/tag/v2.0.0) (available on [CDN](https://unpkg.com/esri-leaflet-cluster@2.0.0)) can be used in apps alongside:
-  *  [Leaflet](http://leafletjs.com) version `1.x`.
+  *  [Leaflet](https://leafletjs.com) version `1.x`.
   * Esri Leaflet version `2.x`
   * [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) version `1.x`
 
 ### Resources
 
-* [Importing Data Into Feature Services](https://developers.arcgis.com/tools/csv-to-feature-service/)
-* [ArcGIS for Developers](http://developers.arcgis.com)
-* [ArcGIS REST Services](http://resources.arcgis.com/en/help/arcgis-rest-api/)
-* [@Esri](http://twitter.com/esri)
-* [@EsriPDX](http://twitter.com/esripdx)
+* [Importing Data Into Feature Services](https://doc.arcgis.com/en/arcgis-online/manage-data/publish-features.htm#GUID-DD47C642-38B4-4645-801D-2866FE90BF73)
+* [ArcGIS for Developers](https://developers.arcgis.com/)
+* [ArcGIS REST Services](https://developers.arcgis.com/rest/)
+* [@Esri](https://twitter.com/esri)
 
 ### Issues
 
 Find a bug or want to request a new feature?  Please let us know by submitting an [issue](https://github.com/Esri/esri-leaflet-cluster/issues).
 
-Please take a look at [previous Esri Leaflet issues](https://github.com/Esri/esri-leaflet/issues?labels=FAQ&milestone=&page=1&state=closed) and [previous Esri Leaflet Cluster issues](https://github.com/Esri/esri-leaflet-cluster/issues?labels=FAQ&milestone=&page=1&state=closed)that resolve common problems.
+Please take a look at [previous Esri Leaflet issues](https://github.com/Esri/esri-leaflet/issues?labels=FAQ&milestone=&page=1&state=closed) and [previous Esri Leaflet Cluster issues](https://github.com/Esri/esri-leaflet-cluster/issues?labels=FAQ&milestone=&page=1&state=closed) that resolve common problems.
 
 You can also post issues on the [GIS Stackexchange](http://gis.stackexchange.com/questions/ask?tags=esri-leaflet,leaflet) an/or the [Esri Leaflet place](https://geonet.esri.com/discussion/create.jspa?sr=pmenu&containerID=1841&containerType=700&tags=esri-leaflet,leaflet) on GeoNet.
 
