@@ -2,6 +2,13 @@
 
 ## [Unreleased][unreleased]
 
+## [2.1.0] - 2020-06-22
+
+### Changed
+
+* Updated dependencies ([#33](https://github.com/Esri/esri-leaflet-cluster/pull/33))
+* port createNewLayer from L.esri.featureLayer for renderer plugin ([#31](https://github.com/Esri/esri-leaflet-cluster/pull/31))
+
 ## [2.0.1]
 
 ### Changed
@@ -77,7 +84,8 @@ clusterLayer.bindPopup(function (layer) {
 
 ## Release Candidate 1
 
-[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0-beta.1...v2.0.0
 [2.0.0-beta.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v1.0.2...v2.0.0-beta.1
