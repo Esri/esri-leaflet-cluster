@@ -1,4 +1,4 @@
-import L from 'leaflet';
+import { setOptions, GeoJSON, markerClusterGroup } from 'leaflet';
 import { FeatureManager } from 'esri-leaflet';
 export { version as VERSION } from '../package.json';
 
@@ -16,12 +16,12 @@ export var FeatureLayer = FeatureManager.extend({
   initialize: function (options) {
     FeatureManager.prototype.initialize.call(this, options);
 
-    options = L.setOptions(this, options);
+    options = setOptions(this, options);
 
     this._layers = {};
     this._leafletIds = {};
 
-    this.cluster = L.markerClusterGroup(options);
+    this.cluster = markerClusterGroup(options);
     this._key = 'c' + (Math.random() * 1e9).toString(36).replace('.', '_');
 
     this.cluster.addEventParent(this);
@@ -45,6 +45,15 @@ export var FeatureLayer = FeatureManager.extend({
    * Feature Management Methods
    */
 
+  createNewLayer: function (geojson) {
+    var layer = GeoJSON.geometryToLayer(geojson, this.options);
+    // trap for GeoJSON without geometry
+    if (layer) {
+      layer.defaultOptions = layer.options;
+    }
+    return layer;
+  },
+
   createLayers: function (features) {
     var markers = [];
 
@@ -53,8 +62,8 @@ export var FeatureLayer = FeatureManager.extend({
       var layer = this._layers[geojson.id];
 
       if (!layer) {
-        layer = L.GeoJSON.geometryToLayer(geojson, this.options);
-        layer.feature = L.GeoJSON.asFeature(geojson);
+        layer = this.createNewLayer(geojson);
+        layer.feature = GeoJSON.asFeature(geojson);
         layer.defaultOptions = layer.options;
         layer._leaflet_id = this._key + '_' + geojson.id;
 
