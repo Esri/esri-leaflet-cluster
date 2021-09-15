@@ -8,7 +8,7 @@
     "John Gravois <jgravois@esri.com> (http://johngravois.com)"
   ],
   "dependencies": {
-    "esri-leaflet": "^2.0.0",
+    "esri-leaflet": "^3.0.2",
     "leaflet": "^1.0.0",
     "leaflet.markercluster": "^1.0.0"
   },

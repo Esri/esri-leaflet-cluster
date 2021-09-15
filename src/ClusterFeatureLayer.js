@@ -174,7 +174,7 @@ export var FeatureLayer = FeatureManager.extend({
   }
 });
 
-export function featureLayer(options) {
+export function featureLayer (options) {
   return new FeatureLayer(options);
 }
 
