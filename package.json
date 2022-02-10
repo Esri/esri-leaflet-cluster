@@ -27,7 +27,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "mkdirp": "^0.5.1",
     "mocha": "^5.2.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "rollup": "^2.0.0",
     "rollup-plugin-uglify": "^6.0.4",
     "semistandard": "^11.0.0",
