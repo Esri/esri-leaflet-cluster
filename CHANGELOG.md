@@ -2,6 +2,10 @@
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+- Do not use named exports from JSON ([info](https://webpack.js.org/migrate/5/#cleanup-the-code) / [same change in Esri Leaflet](https://github.com/Esri/esri-leaflet/pull/1273/files))
+
 ## [2.1.0] - 2020-06-22
 
 ### Changed
