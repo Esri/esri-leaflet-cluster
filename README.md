@@ -39,9 +39,7 @@ Here is a quick example to get you started. Just change the paths to point to th
   <script src="https://unpkg.com/leaflet.markercluster@1.0.4/dist/leaflet.markercluster.js"></script>
 
   <!-- Load Esri Leaflet Cluster from CDN -->
-  <script src="https://unpkg.com/esri-leaflet-cluster@2.0.0/dist/esri-leaflet-cluster.js"
-    integrity="sha512-mhpdD3igvv7A/84hueuHzV0NIKFHmp2IvWnY5tIdtAHkHF36yySdstEVI11JZCmSY4TCvOkgEoW+zcV/rUfo0A=="
-    crossorigin=""></script>
+  <script src="https://unpkg.com/esri-leaflet-cluster"></script>
 
   <style>
     body {margin:0;padding:0;}
@@ -53,11 +51,11 @@ Here is a quick example to get you started. Just change the paths to point to th
 <div id="map"></div>
 
 <script>
-  var map = L.map('map').setView([45.526, -122.667], 15);
+  var map = L.map('map').setView([45.526, -122.667], 6);
 
   L.esri.basemapLayer('Streets').addTo(map);
   L.esri.Cluster.featureLayer({
-    url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0'
+    url: 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0'
   }).addTo(map);
 </script>
 
