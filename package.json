@@ -7,9 +7,9 @@
     "Patrick Arlt <parlt@esri.com> (http://patrickarlt.com)",
     "John Gravois <jgravois@esri.com> (http://johngravois.com)"
   ],
-  "dependencies": {
-    "esri-leaflet": "^2.0.0",
-    "leaflet": "^1.0.0",
+  "peerDependencies": {
+    "esri-leaflet": "*",
+    "leaflet": "*",
     "leaflet.markercluster": "^1.0.0"
   },
   "devDependencies": {
