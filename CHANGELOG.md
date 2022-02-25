@@ -2,9 +2,19 @@
 
 ## [Unreleased][unreleased]
 
+## [3.0.0] - 2022-02-25
+
+### Breaking Changes
+
+* Leaflet, Esri Leaflet, and leaflet.markercluster are now peerDependencies so that consumers can install whichever version they want.
+
 ### Fixed
 
-- Do not use named exports from JSON ([info](https://webpack.js.org/migrate/5/#cleanup-the-code) / [same change in Esri Leaflet](https://github.com/Esri/esri-leaflet/pull/1273/files))
+* Do not use named exports from JSON ([#49](https://github.com/Esri/esri-leaflet-cluster/pull/49)) ([info](https://webpack.js.org/migrate/5/#cleanup-the-code) / [same change in Esri Leaflet](https://github.com/Esri/esri-leaflet/pull/1273/files))
+
+### Changed
+
+* Updated dependencies ([#51](https://github.com/Esri/esri-leaflet-cluster/pull/51))
 
 ## [2.1.0] - 2020-06-22
 
@@ -88,7 +98,8 @@ clusterLayer.bindPopup(function (layer) {
 
 ## Release Candidate 1
 
-[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0-beta.1...v2.0.0
