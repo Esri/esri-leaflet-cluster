@@ -103,7 +103,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 
 Please take a look at [previous Esri Leaflet issues](https://github.com/Esri/esri-leaflet/issues?labels=FAQ&milestone=&page=1&state=closed) and [previous Esri Leaflet Cluster issues](https://github.com/Esri/esri-leaflet-cluster/issues?labels=FAQ&milestone=&page=1&state=closed) that resolve common problems.
 
-You can also post issues on the [GIS Stackexchange](http://gis.stackexchange.com/questions/ask?tags=esri-leaflet,leaflet) an/or the [Esri Leaflet place](https://geonet.esri.com/discussion/create.jspa?sr=pmenu&containerID=1841&containerType=700&tags=esri-leaflet,leaflet) on GeoNet.
+You can also post issues on the [GIS Stack Exchange](http://gis.stackexchange.com/questions/ask?tags=esri-leaflet,leaflet) an/or the [Esri Leaflet Community](https://community.esri.com/t5/esri-leaflet/ct-p/esri-leaflet).
 
 ### Contributing
 
