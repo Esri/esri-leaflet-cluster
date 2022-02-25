@@ -28,6 +28,5 @@ debug/*.html
 !debug/sample.html
 
 # Built Files
-dist/**/*.js
-dist/**/*.map
+dist
 

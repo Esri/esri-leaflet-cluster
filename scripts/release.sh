@@ -11,7 +11,11 @@ npm test || exit 1
 git checkout -b gh-release
 
 # run prepublish to build files
-npm run prepublish
+npm run build
+
+# Integrity string and save to siteData.json
+JS_INTEGRITY=$(cat dist/esri-leaflet-cluster.js | openssl dgst -sha512 -binary | openssl base64 -A)
+echo "{\"name\": \"esri-leaflet-cluster\",\"version\": \"$VERSION\",\"lib\": {\"path\": \"dist/esri-leaflet-cluster.js\",\"integrity\": \"sha512-$JS_INTEGRITY\"}}" > dist/siteData.json
 
 # force add files
 git add dist -f
@@ -28,10 +32,10 @@ zip -r $NAME-v$VERSION.zip dist
 # run gh-release to create the tag and push release to github
 gh-release --assets $NAME-v$VERSION.zip
 
+# publish release on NPM
+npm publish
+
 # checkout master and delete release branch locally and on GitHub
 git checkout master
 git branch -D gh-release
 git push upstream :gh-release
-
-# publish release on NPM
-npm publish

@@ -63,7 +63,6 @@
     "prebuild": "mkdirp dist",
     "build": "rollup -c profiles/debug.js & rollup -c profiles/production.js",
     "lint": "semistandard | snazzy",
-    "prepublish": "npm run build",
     "pretest": "npm run build",
     "release": "./scripts/release.sh",
     "start": "watch 'npm run build' src & http-server -p 5678 -c-1 -o",
