@@ -1,6 +1,10 @@
 # Esri Leaflet Cluster
 
-[![Build Status](https://travis-ci.org/Esri/esri-leaflet-cluster.svg?branch=master)](https://travis-ci.org/Esri/esri-leaflet-cluster)
+[![npm version][npm-img]][npm-url]
+[![apache licensed](https://img.shields.io/badge/license-Apache%202.0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/Esri/esri-leaflet/master/LICENSE)
+
+[npm-img]: https://img.shields.io/npm/v/esri-leaflet-cluster.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/esri-leaflet-cluster
 
 > enables visualization of ArcGIS Feature Services as clusters using the [L.MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) Leaflet Plugin.
 
