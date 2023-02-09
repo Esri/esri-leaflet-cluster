@@ -17,6 +17,7 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
     "chai": "4.3.7",
+    "chokidar-cli": "^3.0.0",
     "gh-release": "^7.0.2",
     "http-server": "^14.1.1",
     "karma": "^6.4.1",
@@ -29,12 +30,12 @@
     "mkdirp": "^1.0.4",
     "mocha": "^10.2.0",
     "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
     "rollup": "^2.79.1",
     "semistandard": "^11.0.0",
     "sinon": "^15.0.1",
     "sinon-chai": "3.7.0",
-    "snazzy": "^9.0.0",
-    "watch": "^1.0.2"
+    "snazzy": "^9.0.0"
   },
   "homepage": "https://github.com/Esri/esri-leaflet-cluster",
   "jsnext:main": "src/ClusterFeatureLayer.js",
@@ -65,7 +66,9 @@
     "lint": "semistandard | snazzy",
     "pretest": "npm run build",
     "release": "./scripts/release.sh",
-    "start": "watch 'npm run build' src & http-server -p 5678 -c-1 -o",
+    "start-watch": "chokidar src -c \"npm run build\"",
+    "start": "run-p start-watch serve",
+    "serve": "http-server -p 5678 -c-1 -o",
     "test": "npm run lint && karma start"
   },
   "semistandard": {
