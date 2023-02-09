@@ -66,8 +66,7 @@
     }).addTo(map);
     
     clusterLayer.bindPopup(function (layer) {
-      console.log(layer)
-      return layer.feature.properties.stop_desc;
+      return L.Util.template("<p>{areaname}</p>", layer.feature.properties);
     })
   </script>
 
