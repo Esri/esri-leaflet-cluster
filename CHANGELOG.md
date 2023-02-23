@@ -2,103 +2,114 @@
 
 ## [Unreleased][unreleased]
 
+## [3.0.1] - 2023-02-23
+
+### Fixed
+
+- Popup/tooltip issue ([#65](https://github.com/Esri/esri-leaflet-cluster/pull/65))
+
+### Changed
+
+- Package maintenance - updated dependencies, unit testing, etc. ([#63](https://github.com/Esri/esri-leaflet-cluster/pull/63))
+
 ## [3.0.0] - 2022-02-25
 
 ### Breaking Changes
 
-* Leaflet, Esri Leaflet, and leaflet.markercluster are now peerDependencies so that consumers can install whichever version they want.
+- Leaflet, Esri Leaflet, and leaflet.markercluster are now peerDependencies so that consumers can install whichever version they want.
 
 ### Fixed
 
-* Do not use named exports from JSON ([#49](https://github.com/Esri/esri-leaflet-cluster/pull/49)) ([info](https://webpack.js.org/migrate/5/#cleanup-the-code) / [same change in Esri Leaflet](https://github.com/Esri/esri-leaflet/pull/1273/files))
+- Do not use named exports from JSON ([#49](https://github.com/Esri/esri-leaflet-cluster/pull/49)) ([info](https://webpack.js.org/migrate/5/#cleanup-the-code) / [same change in Esri Leaflet](https://github.com/Esri/esri-leaflet/pull/1273/files))
 
 ### Changed
 
-* Updated dependencies ([#51](https://github.com/Esri/esri-leaflet-cluster/pull/51))
+- Updated dependencies ([#51](https://github.com/Esri/esri-leaflet-cluster/pull/51))
 
 ## [2.1.0] - 2020-06-22
 
 ### Changed
 
-* Updated dependencies ([#33](https://github.com/Esri/esri-leaflet-cluster/pull/33))
-* port createNewLayer from L.esri.featureLayer for renderer plugin ([#31](https://github.com/Esri/esri-leaflet-cluster/pull/31))
+- Updated dependencies ([#33](https://github.com/Esri/esri-leaflet-cluster/pull/33))
+- port createNewLayer from L.esri.featureLayer for renderer plugin ([#31](https://github.com/Esri/esri-leaflet-cluster/pull/31))
 
 ## [2.0.1]
 
 ### Changed
 
-* Updated dependencies ([#20](https://github.com/Esri/esri-leaflet-cluster/pull/20))
+- Updated dependencies ([#20](https://github.com/Esri/esri-leaflet-cluster/pull/20))
 
 ## [2.0.0]
 
 ### Breaking Changes
 
-* Namespace change (~~`L.esri.Cluster.clusteredFeatureLayer`~~ is now `L.esri.Cluster.featureLayer` )
-* repository and npm package have been renamed esri-leaflet-cluster~~ed-feature-layer~~ for brevity's sake
+- Namespace change (~~`L.esri.Cluster.clusteredFeatureLayer`~~ is now `L.esri.Cluster.featureLayer` )
+- repository and npm package have been renamed esri-leaflet-cluster~~ed-feature-layer~~ for brevity's sake
 
 ### Added
 
-* The build system has been refactored to use latest Rollup and Rollup plugins.
-* Reworked bundling directives for various modules systems to resolve and simplify various issues
-  * WebPack users no longer have to use the Babel loader.
-  * Babelify with Babel 6 now works
+- The build system has been refactored to use latest Rollup and Rollup plugins.
+- Reworked bundling directives for various modules systems to resolve and simplify various issues
+  - WebPack users no longer have to use the Babel loader.
+  - Babelify with Babel 6 now works
 
 ### Removed
 
-* `bindPopup` and `unbindPopup` logic have been removed from this plugin.  Equivalent functionality is available via [`L.Layer`](http://leafletjs.com/reference-1.0.0.html#layer-bindpopup) in Leaflet itself.
+- `bindPopup` and `unbindPopup` logic have been removed from this plugin. Equivalent functionality is available via [`L.Layer`](http://leafletjs.com/reference-1.0.0.html#layer-bindpopup) in Leaflet itself.
 
 ```js
 clusterLayer.bindPopup(function (layer) {
   return "attribute value is: " + layer.feature.properties.ATTRIBUTENAME;
-})
+});
 ```
 
 ## [2.0.0-beta.1]
 
 ### Breaking Changes
 
-* Namespace change (~~`L.esri.clusteredFeatureLayer`~~ is now `L.esri`**.Cluster.**`clusteredFeatureLayer` )
-* Requires the 2.0.0-beta.6 release of Esri Leaflet.
-* Requires the 1.0.0-beta.2 release of Leaflet.
+- Namespace change (~~`L.esri.clusteredFeatureLayer`~~ is now `L.esri`**.Cluster.**`clusteredFeatureLayer` )
+- Requires the 2.0.0-beta.6 release of Esri Leaflet.
+- Requires the 1.0.0-beta.2 release of Leaflet.
 
 ### Added
 
-* Better build/test/release automation.
-* Support for JSPM in package.json. Now you can `import cluster from 'esri-leaflet-clustered-feature-layer/src/ClusteredFeatureLayer';` for more compact builds but, be aware of [caveats](http://blog.izs.me/post/44149270867/why-no-directories-lib-in-node-the-less-snarky)
-* Support for browserify in the package.json. Now you can `var cluster = require('esri-leaflet-clustered-feature-layer/src/ClusteredFeatureLayer');` for more compact builds, but be aware of [caveats](http://blog.izs.me/post/44149270867/why-no-directories-lib-in-node-the-less-snarky)
+- Better build/test/release automation.
+- Support for JSPM in package.json. Now you can `import cluster from 'esri-leaflet-clustered-feature-layer/src/ClusteredFeatureLayer';` for more compact builds but, be aware of [caveats](http://blog.izs.me/post/44149270867/why-no-directories-lib-in-node-the-less-snarky)
+- Support for browserify in the package.json. Now you can `var cluster = require('esri-leaflet-clustered-feature-layer/src/ClusteredFeatureLayer');` for more compact builds, but be aware of [caveats](http://blog.izs.me/post/44149270867/why-no-directories-lib-in-node-the-less-snarky)
 
 ## [1.0.2]
 
 ### Fixed
 
-* Fix build system error. Ensure that tag contains built files.
+- Fix build system error. Ensure that tag contains built files.
 
 ## [1.0.0]
 
 ### Changed
 
-* Update dependencies
-* CDN moved to [JS Delivr](http://www.jsdelivr.com/#!leaflet.esri.clustered-feature-layer)
+- Update dependencies
+- CDN moved to [JS Delivr](http://www.jsdelivr.com/#!leaflet.esri.clustered-feature-layer)
 
 ## [Release Candidate 4]
 
 ### Changed
 
-* `bower install esri-leaflet-clustered-feature-layer` should now work without `bower cache clean`
-* Update Esri Leaflet dependency to RC 4
+- `bower install esri-leaflet-clustered-feature-layer` should now work without `bower cache clean`
+- Update Esri Leaflet dependency to RC 4
 
 ## [Release Candidate 3]
 
 ### Changed
 
-* fixed `bower install esri-leaflet-clustered-feature-layer`
-* Update Esri Leaflet dependency to RC 3
+- fixed `bower install esri-leaflet-clustered-feature-layer`
+- Update Esri Leaflet dependency to RC 3
 
 ## [Release Candidate 2]
 
 ## Release Candidate 1
 
-[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v3.0.0...HEAD
+[unreleased]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v3.0.1...HEAD
+[3.0.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/Esri/esri-leaflet-clustered-feature-layer/compare/v2.0.0...v2.0.1
